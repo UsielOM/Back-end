@@ -51,7 +51,7 @@ init = function() {
             console.error("Conexion fracasada ", err)
         });
 
-    // Usersregister.sync();
+    Usersregister.sync();
     // Medicsregister.sync();
 
 

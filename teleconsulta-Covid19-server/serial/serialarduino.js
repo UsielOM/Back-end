@@ -1,6 +1,7 @@
 const express = require('express');
 const socketIo = require('socket.io');
 const http = require('http');
+//hola
 
 
 const appsa = express();
@@ -16,10 +17,10 @@ const parser = new Readline();
 var mySerial = new SerialPort('COM5', {
 
     baudRate: 9600, //115200
-    
 
 
-    
+
+
 
 
 });

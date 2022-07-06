@@ -12,62 +12,37 @@ const SerialPort = require("serialport");
 const Readline = SerialPort.parsers.Readline;
 const parser = new Readline();
 
-var b;
+
 
 var mySerial = new SerialPort('COM4', {
 
-    baudRate: 230400, //115200
+    baudRate: 115200 //9600 
+
+
+
+
 
 
 });
 
 mySerial.on('open', function() {
     console.log('Opened Serial Port');
-
+    var c = 5;
+    mySerial.write(`El valor de`);
 
 });
 
 mySerial.on('data', function(data) {
-    // var a = data;
-    // if(a.log() == 3)
-    // {
 
-    // }
-
-    // var a = data
-
-    var c = data;
-
-    console.log(c.toString());
-    if (c < 51) {
-
-    }
+    console.log(data.toString());
 
 
 
-});
 
-
-mySerial.on('err', function(err) {
-    console.log(err.message);
-
-    if (err) {
-        alert("Failed to open port.");
-    } else {
-
-        document.getElementById("COMPortStatus").innerText = "COM3 Is Open"
-        Scale.attachPortHandlers();
-
-    }
 });
 
 serverad.listen(4090, () => {
     console.log('Server on port', 4090)
-
-
 })
-
-
-
 
 exports.default = serverad;
